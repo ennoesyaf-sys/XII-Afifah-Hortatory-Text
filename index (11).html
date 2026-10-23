@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Project Infografis: Teenagers Can Make a Difference</title>
+<style>
+:root{--bg:#e6efe3;--fg:#24363a;--card:#f7fbf4;--bd:#bfd0bc;--ac:#e8833a;--ok:#2a9d8f;--no:#d1495b;--mut:#55696b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b2527;--fg:#e8eee9;--card:#243236;--bd:#3a4d52;--mut:#a9bbb8}}
+:root[data-theme="dark"]{--bg:#1b2527;--fg:#e8eee9;--card:#243236;--bd:#3a4d52;--mut:#a9bbb8}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;display:flex;flex-direction:column}
+#bar{height:6px;background:var(--ac);width:0;transition:width .3s;flex:none}
+#deck{flex:1;overflow-y:auto;padding:20px}
+.slide{display:none;flex-direction:column;gap:14px;max-width:980px;margin:0 auto}
+.slide.on{display:flex}
+h1{font-size:clamp(28px,6vw,50px);margin:0;line-height:1.1}
+h2{font-size:clamp(24px,4.5vw,36px);margin:0;line-height:1.15}
+h3{margin:0;font-size:18px}
+p,li{line-height:1.5;font-size:clamp(16px,2.6vw,19px)}
+p{margin:0}ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.tag{display:inline-block;background:var(--ac);color:#1a1a1a;font-weight:700;font-size:14px;padding:4px 12px;border-radius:99px;align-self:flex-start}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.row{display:flex;flex-wrap:wrap;gap:12px}.row>*{flex:1 1 220px}
+.mut{color:var(--mut);font-size:15px}.cite{color:var(--ac);font-weight:700}
+button{font:inherit;font-size:16px;border:1px solid var(--bd);background:var(--card);color:var(--fg);border-radius:10px;padding:8px 14px;cursor:pointer}
+button.on2{background:var(--ok);color:#fff;border-color:var(--ok)}
+.tm{align-self:flex-start;font-weight:700}
+label{display:flex;gap:10px;align-items:flex-start;font-size:clamp(16px,2.6vw,19px);line-height:1.4;cursor:pointer}
+input[type=checkbox]{width:20px;height:20px;margin-top:2px;flex:none}
+.cnt{font-weight:700;color:var(--ok)}
+.bp{display:flex;flex-direction:column;gap:8px;border:2px dashed var(--bd);border-radius:14px;padding:12px}
+.bp div{border-radius:10px;padding:12px;font-weight:600}
+.b1{background:#1f2a44;color:#f3efe6}.b2{background:var(--ok);color:#10201f}.b3{background:var(--ac);color:#1a1a1a}
+table{border-collapse:collapse;width:100%;font-size:clamp(14px,2.4vw,17px)}
+th,td{border:1px solid var(--bd);padding:8px;text-align:left;vertical-align:top}th{background:var(--card)}
+nav{flex:none;display:flex;justify-content:space-between;align-items:center;padding:10px 20px calc(10px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--bd)}
+nav span{color:var(--mut)}
+</style></head><body>
+<div id="bar"></div>
+<main id="deck">
+
+<section class="slide on">
+<span class="tag">Project · 45 menit kedua</span>
+<h1>Teenagers Can Make a Difference</h1>
+<p>Kelompok membuat <b>infografis hortatory exposition</b> lalu mempresentasikannya. Infografis ini memakai struktur dan ciri bahasa yang baru dipelajari.</p>
+<div class="row">
+<div class="card"><b>Produk</b><span>1 infografis per kelompok (4 siswi), di Canva atau kertas A3</span></div>
+<div class="card"><b>Presentasi</b><span>3 menit per kelompok, semua anggota berbicara. Jadwal tampil mengikuti arahan guru.</span></div>
+</div>
+<div class="row">
+<div class="card"><b>5’ Pilih topik</b></div><div class="card"><b>10’ Susun kerangka</b></div><div class="card"><b>25’ Desain infografis</b></div><div class="card"><b>5’ Cek akhir</b></div>
+</div>
+</section>
+
+<section class="slide">
+<span class="tag">Pembagian kelompok</span>
+<h2>Pembagian Kelompok</h2>
+<p class="mut">5 kelompok, masing-masing 4 siswi.</p>
+<div class="row" id="grp"></div>
+<div class="card"><b class="cite">Aturan kelompok</b><p>Semua anggota ikut mengerjakan infografis dan wajib berbicara saat presentasi. Bagi peran sendiri: pembuka dan thesis, argument 1, argument 2, argument 3 dan recommendation, penutup. Boleh merangkap peran bila perlu.</p></div>
+</section>
+
+<section class="slide">
+<span class="tag">5 menit</span>
+<h2>1. Pilih satu sub-topik</h2>
+<p class="mut">Klik topik untuk melihat contoh thesis. Boleh dipakai langsung atau diubah dengan kata-kata kelompok.</p>
+<div class="row" id="tps">
+<button data-s="Teenagers can protect the environment by starting small habits at school and at home.">Lingkungan</button>
+<button data-s="Teenagers can stop bullying by speaking up and supporting their friends.">Anti-bullying</button>
+<button data-s="Teenagers can make social media a positive space by sharing accurate information.">Literasi digital</button>
+<button data-s="Teenagers can help their communities by joining volunteer activities.">Volunteering</button>
+<button data-s="Teenagers can support each other’s mental well-being by listening without judging.">Kesehatan mental sebaya</button>
+<button data-s="Teenagers can create new opportunities by starting small, creative businesses.">Wirausaha muda</button>
+</div>
+<div class="card"><b class="cite">Contoh thesis</b><p id="ts">Pilih topik di atas.</p></div>
+<button class="tm" data-m="5"></button>
+</section>
+
+<section class="slide">
+<span class="tag">10 menit</span>
+<h2>2. Susun kerangka</h2>
+<p>Tulis di kertas atau Canva. Satu orang menulis, anggota lain memberi ide.</p>
+<div class="row">
+<div class="card"><b class="cite">Thesis</b><span>Satu kalimat posisi. Pola: Teenagers can … by …</span></div>
+<div class="card"><b class="cite">Arguments (3)</b><span>Tiap argumen: satu alasan + satu bukti atau contoh (angka, contoh nyata, atau kegiatan).</span></div>
+<div class="card"><b class="cite">Recommendation</b><span>Ajakan dengan modal verb. Pola: We should / must / need to …</span></div>
+</div>
+<div class="card"><h3>Checklist ciri bahasa <span class="cnt" id="c1">0 / 5</span></h3>
+<label><input type="checkbox" class="k1"> Minimal 3 modal verbs (should, must, can, could, need to)</label>
+<label><input type="checkbox" class="k1"> Minimal 3 connectives (firstly, moreover, however, therefore, in conclusion)</label>
+<label><input type="checkbox" class="k1"> Minimal 2 emotive words (unfair, wonderful, sadly, vital)</label>
+<label><input type="checkbox" class="k1"> Minimal 2 abstract nouns (kindness, responsibility, courage, problem)</label>
+<label><input type="checkbox" class="k1"> Action verbs dipakai (affect, support, create, protect, join)</label>
+</div>
+<button class="tm" data-m="10"></button>
+</section>
+
+<section class="slide">
+<span class="tag">25 menit</span>
+<h2>3. Desain infografis</h2>
+<p>Susun tata letaknya mengikuti struktur teks:</p>
+<div class="bp">
+<div class="b1">ATAS: Judul + Thesis</div>
+<div class="row"><div class="b2">Argument 1: ikon + bukti</div><div class="b2">Argument 2: ikon + bukti</div><div class="b2">Argument 3: ikon + bukti</div></div>
+<div class="b3">BAWAH: Recommendation (We should …)</div>
+</div>
+<div class="card"><h3>Tips dari contoh infografis di buku (Step Up 3 hlm. 100-101)</h3>
+<ul>
+<li>Satu ide per kotak, teks pendek (sekitar 25 kata per kotak).</li>
+<li>Pakai angka, ikon, dan warna kontras supaya mudah dibaca dari jauh.</li>
+<li>Judul besar, isi lebih kecil, urutan baca jelas dari atas ke bawah.</li>
+<li>Tulis sumber data kalau memakai angka atau fakta.</li>
+<li>Tidak ada PR, jadi targetkan selesai di kelas: buat sederhana dan bagi tugas (judul, tiap argumen, recommendation).</li>
+</ul></div>
+<button class="tm" data-m="25"></button>
+</section>
+
+<section class="slide">
+<span class="tag">Persiapan presentasi</span>
+<h2>4. Kerangka presentasi 3 menit</h2>
+<p class="mut">Bagi peran: pembuka dan thesis, argument 1, argument 2, argument 3 dan recommendation, penutup.</p>
+<div class="card"><p><b>Pembuka:</b> Good morning, everyone. Our topic is … Our thesis is that teenagers can …</p>
+<p><b>Argumen:</b> Firstly, … For example, … Moreover, … In addition, …</p>
+<p><b>Recommendation:</b> Therefore, we should … / Every teenager must …</p>
+<p><b>Penutup:</b> In conclusion, … Thank you for listening.</p></div>
+<ul><li>Bicara menghadap kelas, bukan membaca infografis.</li><li>Gunakan minimal 3 modal verbs dan 3 connectives saat berbicara.</li><li>Kalau ada waktu, latihan satu kali dengan timer 3 menit.</li></ul>
+</section>
+
+<section class="slide">
+<span class="tag">Penilaian</span>
+<h2>5. Rubrik penilaian</h2>
+<table>
+<tr><th>Aspek</th><th>Yang dinilai</th><th>Skor</th></tr>
+<tr><td>Struktur</td><td>Thesis, 3 arguments, recommendation lengkap dan berurutan</td><td>25</td></tr>
+<tr><td>Isi</td><td>Argumen jelas, ada bukti atau contoh, sesuai tema</td><td>25</td></tr>
+<tr><td>Bahasa</td><td>Modal verbs, connectives, emotive words, abstract nouns, tata bahasa</td><td>25</td></tr>
+<tr><td>Desain dan penyampaian</td><td>Infografis rapi dan mudah dibaca; presentasi lancar dan kompak</td><td>25</td></tr>
+</table>
+<p class="mut">Total 100 poin.</p>
+</section>
+
+<section class="slide">
+<span class="tag">5 menit</span>
+<h2>6. Cek akhir</h2>
+<div class="card"><h3>Sebelum bel pergantian pelajaran atau istirahat <span class="cnt" id="c2">0 / 6</span></h3>
+<label><input type="checkbox" class="k2"> Topik dan thesis sudah ditulis</label>
+<label><input type="checkbox" class="k2"> 3 argumen punya bukti atau contoh</label>
+<label><input type="checkbox" class="k2"> Recommendation memakai modal verb</label>
+<label><input type="checkbox" class="k2"> Checklist ciri bahasa terpenuhi</label>
+<label><input type="checkbox" class="k2"> Infografis selesai atau tinggal sedikit lagi</label>
+<label><input type="checkbox" class="k2"> Tahu siapa berbicara di bagian mana</label>
+</div>
+<div class="card"><b class="cite">Sebelum bel berbunyi</b><p>Infografis dikerjakan sepenuhnya di kelas. Kalau belum rampung, lanjutannya mengikuti arahan guru.</p></div>
+<button class="tm" data-m="5"></button>
+</section>
+
+</main>
+<nav><button id="pv">← Sebelumnya</button><span id="pg"></span><button id="nx">Berikutnya →</button></nav>
+<script>
+var S=[].slice.call(document.querySelectorAll('.slide')),i=0,deck=document.getElementById('deck'),bar=document.getElementById('bar'),pg=document.getElementById('pg');
+function go(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach(function(s,k){s.classList.toggle('on',k===i)});pg.textContent=(i+1)+' / '+S.length;bar.style.width=((i+1)/S.length*100)+'%';deck.scrollTop=0}
+document.getElementById('pv').onclick=function(){go(i-1)};document.getElementById('nx').onclick=function(){go(i+1)};
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')go(i+1);if(e.key==='ArrowLeft')go(i-1)});
+document.querySelectorAll('#tps button').forEach(function(b){b.onclick=function(){document.querySelectorAll('#tps button').forEach(function(x){x.classList.remove('on2')});b.classList.add('on2');document.getElementById('ts').textContent=b.dataset.s}});
+function chk(cls,id,n){var c=document.getElementById(id);document.querySelectorAll('.'+cls).forEach(function(x){x.onchange=function(){c.textContent=document.querySelectorAll('.'+cls+':checked').length+' / '+n}})}
+chk('k1','c1',5);chk('k2','c2',6);
+document.querySelectorAll('.tm').forEach(function(b){
+ var m=+b.dataset.m,t=null,left=0;
+ function lbl(){b.textContent='⏱ Mulai timer '+m+' menit'}
+ function show(){var mm=Math.floor(left/60),ss=left%60;b.textContent='⏱ '+mm+':'+(ss<10?'0':'')+ss+' (klik untuk reset)'}
+ lbl();
+ b.onclick=function(){if(t){clearInterval(t);t=null;lbl();return}left=m*60;show();t=setInterval(function(){left--;if(left<=0){clearInterval(t);t=null;b.textContent='⏱ Waktu habis! (klik untuk ulang)';return}show()},1000)}
+});
+var NM=["Tsabitah Zuleika Chloe Hertanto","Neila Janeeta","Nararya Khansa Ayundhia","Aisyah Inaya Kirana","Raisha Calluella","Tengku Khansa Khairunnisa","Salwaa","Khadeeja’ Aliya Raihana","Khaulah Muthiah Zahrah","Zhaafirah Alya Putri","Aqila Rianty Putri","Khansa Humaira Arfan","Ghaiza Fikratuha Alima","Nosayo Queenzy Ramadhani","Raihanah Thariq Alwyni","Fiona Almira Putri","Diyara Mada Wirasmono","Khadijah Zahra","Mazaya Salma Muhammad","Latisha Anza Pramudhya"],SZ=[4,4,4,4,4];
+function draw(a){var h='',k=0;SZ.forEach(function(s,g){h+='<div class="card"><b class="cite">Kelompok '+(g+1)+'</b>'+a.slice(k,k+s).map(function(n){return '<span>'+n+'</span>'}).join('')+'</div>';k+=s});document.getElementById('grp').innerHTML=h}
+draw(NM);
+go(0);
+</script>
+</body></html>
